@@ -1,0 +1,301 @@
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ ( more comments )
+ ." At least one more ! "
+ ." HELLO WORLD " CR
+ ." THAT'S ALL FOLKS !" CR
+ ." That's all folks ! "
+ 0 HANDLER !
+ 80 ARRAY TIBS 
+ : %%S SP@ . @ . SP0 . CR LINES ; 
+ : && SP@ . DROP RP@ . DROP LATEST @ . DROP HEAP @ . DROP ;
+ : ' HASH FIND IF CELL + CELL + THEN ; 
+ : ( 32 8 + 1 + SCAN ; 
+ : ( [CHAR] ) PARSE DROP DROP ; 
+ : * DUP IF OVER 0< OVER 0< XOR >R 0 ROT ABS ROT ABS BEGIN DUP WHILE SWAP ROT OVER + SWAP ROT 1- REPEAT DROP DROP R> IF NEGATE THEN ELSE SWAP DROP THEN ;
+ : * UM* DROP ; 
+ : ** DUP IF >R DUP R> 1 DO OVER + LOOP SWAP DROP THEN ;
+ : */ */MOD SWAP DROP ; 
+ : */MOD >R M* R> M/MOD ; 
+ : +! SWAP OVER @ + SWAP ! ; 
+ : +FIELD CREATE OVER , + DOES> @ + ;
+ : , HERE ! CELL ALLOT ; 
+ : ," 0 DO DUP C@ , 1 + LOOP DROP ;
+ : ," STATE @ IF ELSE THEN ;
+ : - NOT 1 + + ; 
+ : -1 U@ 0# ; 
+ : -2ROT 2ROT 2ROT ;
+ : -> DEPTH SUP ACTUAL-DEPTH ! ?DUP IF 0 DO ACTUAL-RESULTS I CELLS + ! LOOP THEN ;
+ : -ROT SWAP >R SWAP R> ; 
+ : -ROT SWAP SWIP ;
+ : ." 32 2 + BEGIN KEY OVER OVER - WHILE EMIT REPEAT DROP DROP ;
+ : ." [CHAR] " PARSE TYPE ; 
+ : .EXECUTE .SEARCH IF @ EXECUTE ELSE ," NO COMPILED CODE FOUND " THEN ;
+ : .MESSAGE .SEARCH IF COUNT TYPE ELSE ," NO MESSAGE FOUND " THEN ;
+ : .SEARCH BEGIN @ 2DUP CELL + @ = IF SWAP OVER CELL + CELL + TRUE EXIT THEN DUP @ 0 = IF DROP DROP FALSE EXIT THEN AGAIN ;
+ : / ( x y -- q ) /MOD SWAP DROP ;
+ : / /MOD NIP ; 
+ : /MOD DUP IF OVER 0< >R OVER 0< OVER 0< XOR >R 0 ROT ABS ROT ABS BEGIN SWAP OVER - DUP 0< NOT WHILE SWAP ROT 1+ ROT ROT REPEAT + SWAP R> IF NEGATE THEN R> IF SWAP NEGATE SWAP THEN THEN ;
+ : /MOD OVER 0< SWAP M/MOD ; 
+ : 0 -1 -1 NAND ; 
+ : 0 LIT [ 0 , ] ;
+ : 0< 0 < ;
+ : 0< ISNEGATIVE AND 0# ; 
+ : 0= 0# NOT ; 
+ : 0> DUP 0= IF DROP FALSE EXIT THEN 0< IF FALSE EXIT THEN TRUE ; 
+ : 0fh LIT [ 16 1 - , ] ; 
+ : 1 -1 -1 + -1 NAND ; 
+ : 1 LIT [ 1 , ] ;
+ : 128 LIT [ 64 64 + , ] ; 
+ : 16 LIT [ 8 8 + , ] ; 
+ : 2 1 1 + ; 
+ : 2 LIT [ 1 1 + , ] ;
+ : 2! SWAP OVER ! CELL + ! ;
+ : 2* ( x -- y ) 2 * ;
+ : 2* 2 * ; 
+ : 2* DUP + ; 
+ : 2** 2* 2* 2* 2* 2* 2* 2* 2* ; 
+ : 2/ ( x -- y ) 2 / ;
+ : 2/ 0 32 2 DO OVER ISNEGATIVE AND IF 1 + THEN DUP + SWAP DUP + SWAP LOOP OVER ISNEGATIVE AND IF 1 + THEN SWAP DROP ;
+ : 2/ 2 / ; 
+ : 2>R SWAP >R >R ;
+ : 2@ DUP CELL + @ SWAP @ ;
+ : 2DROP DROP DROP ; 
+ : 2DUP OVER OVER ; 
+ : 2NIP 2SWAP 2DROP ;
+ : 2OVER >R >R 2DUP R> R> 2SWAP ;
+ : 2R> R> R> SWAP ;
+ : 2R@ R> R> 2DUP >R >R SWAP ;
+ : 2ROT 2>R 2SWAP 2R> 2SWAP ;
+ : 2SWAP ROT >R ROT R> ;
+ : 2SWAP ROT >R ROT R> ;
+ : 2TUCK 2SWAP 2OVER ;
+ : 3 2 1 + ; 
+ : 32 LIT [ 16 16 + , ] ; 
+ : 4 2 2 + ; 
+ : 4 LIT [ 2 2 + , ] ;
+ : 48 LIT [ 32 16 + , ] ; 
+ : 57 LIT [ 48 10 + 1 - , ] ; 
+ : 64 LIT [ 32 32 + , ] ; 
+ : 7 LIT [ 4 2 + 1 + , ] ; 
+ : 8 LIT [ 4 4 + , ] ; 
+ : 80000000h LIT [ 0 c, 0 c, 0 c, 80h c, ] ; 
+ : 80H 1 2* 2* 2* 2* 2* 2* 2* ; 
+ : :NAME HERE : 0 STATE ! ; 
+ : :NONAME HERE 1 STATE ! ; 
+ : < - 0< ;
+ : < 2DUP XOR 0< IF DROP 0< EXIT THEN - 0< ;
+ : < >= INVERT ;
+ : <= 2DUP < -ROT = OR ;
+ : <> - 0# ; 
+ : <BUILDS CREATE 0 , ; 
+ : = <> NOT ; 
+ : = XOR IF FALSE EXIT THEN TRUE ;
+ : > SWAP < ;
+ : > SWAP < ;
+ : >= - 80000000h AND 0= ;
+ : >BODY @ ; 
+ : >R RP@ @ SWAP RP@ ! RP@ CELL - RP ! RP@ ! ; 
+ : ?BACK R> UNTIL ;
+ : ?BRANCH 0# NOT RP@ @ @ CELL - AND RP@ @ + CELL + RP@ ! ; 
+ : ?DUP DUP ?BRANCH [ 4 , ] DUP ;
+ : ?DUP DUP IF DUP THEN ; 
+ : ABORT -1 THROW ;
+ : ABORT VOID ; 
+ : ABS DUP 0< IF NEGATE THEN ;
+ : ABS DUP 0< IF NEGATE THEN ;
+ : ACCEPT IF FOR KEY DUP CR <> IF OVER ! 1 + ELSE R> DROP 0 R> THEN NEXT THEN DROP ; 
+ : ACTION-OF STATE @ IF ['] ['] , ['] DEFER@ , ELSE ' DEFER@ THEN ; 
+ : AGAIN ['] BRANCH , HERE - , ; 
+ : ALIGN 3 + TRUE 3 - AND ; 
+ : ALIGNED DUP 0 2 UM/MOD DROP DUP IF 2 SWAP - THEN + ; 
+ : ALLOT HERE + HEAP ! ; 
+ : AND NAND NOT ; 
+ : ARRAY CREATE ALLOT DOES> + @ ; 
+ : BACK R> AGAIN ;
+ : BEATS HEAD CELL + ; 
+ : BEGIN HERE ; 
+ : BEGIN-STRUCTURE CREATE HERE 0 0 , DOES> @ ;
+ : BL LIT [ 16 16 + , ] ; 
+ : BODY ['] LIT , HERE CELL + , 0 , ;
+ : BRANCH RP@ @ DUP @ + RP@ ! ; 
+ : BREAK ['] DUP , ['] R> , ['] LEAVE , ; 
+ : BUFFER CREATE ALLOT ; 
+ : C! DUP @ ffh NOT AND ROT ffh AND OR SWAP ! ; 
+ : C, HERE C! 1 ALLOT ; 
+ : C@ @ ffh AND ; 
+ : CASE 0 ; 
+ : CATCH SP@ >R HANDLER @ >R RP@ HANDLER ! EXECUTE R> HANDLER ! R> DROP 0 ;
+ : CCOPY FOR OVER @ OVER ! 1 + SWAP 1 + SWAP NEXT DROPS ;
+ : CCOPY< J FOR OVER @ OVER ! 1 - SWAP 1 - SWAP NEXT DROPS ;
+ : CELL 4 ; 
+ : CELL LIT [ 4 , ] ; 
+ : CELLS DUP + DUP + ;
+ : CFILL FOR OVER OVER ! 1 + NEXT DROPS ;
+ : CFILL< FOR OVER OVER ! 1 - NEXT DROPS ;
+ : CHARS ;
+ : CLOCKS BEATS @ TICKS @ ;
+ : COMPILE R> DUP @ , CELL + >R ;
+ : COMPILES ['] LIT , HERE >R 0 , ['] LIT , DUP , ['] TYPE , ['] EXIT , HERE R> ! ,S 0 , ;
+ : CONSTANT CREATE , DOES> @ ; 
+ : COPY >R BEGIN KEY OVER OVER - WHILE DUP R> DUP 1 + >R C! REPEAT DROP R> ;
+ : CR 8 2 + EMIT ; 
+ : CREATE :NAME ['] LIT , HERE CELL + CELL + CELL + , HERE BODY ! ['] EXIT , ['] EXIT , LATEST ! ; 
+ : D2* 2DUP D+ ; 
+ : D2/ DUP >R 1 AND DU2/ R> 2/ OR ; 
+ : DEFER CREATE ['] ABORT , DOES> @ EXECUTE ; 
+ : DEFER! >BODY ! ; 
+ : DEFER@ >BODY @ ; 
+ : DEPTH SP0 SP@ @ - !
+ : DO ['] SWAP , HERE ['] >R , ['] >R , ; 
+ : DOCON R> DUP CELL + >R @ ;
+ : DOES> R> BODY @ ! ; 
+ : DOLIT R> DUP CELL + >R ;
+ : DOVAR R> DUP CELL + >R ;
+ : DROP DUP - + ; 
+ : DROPS DROP DROP DROP ; 
+ : DU2/ 2 MU/MOD ROT DROP ; 
+ : DUMPS SWAP BEGIN DUP . @ . CR DROP CELL + OVER OVER < = IF DROP DROP EXIT THEN AGAIN ;
+ : DUP SP@ @ ; 
+ : ELSE ['] BRANCH , HERE 0 , SWAP DUP HERE SWAP - SWAP ! ; 
+ : EMPTY-STACK SP0 SP@ ! ;
+ : END-STRUCTURE SWAP ! ;
+ : ENDCASE ['] DROP , DUP 0 = IF DROP EXIT THEN 0 DO DUP HERE SWAP - SWAP ! LOOP ; 
+ : ENDOF ['] BRANCH , HERE 0 , SWAP DUP HERE SWAP - SWAP ! ; 
+ : ERROR CR TYPE SOURCE TYPE EMPTY-STACK #ERRORS @ 1 + #ERRORS ! ;
+ : EXECUTE >R ; 
+ : FALSE 0 ; 
+ : FIND LATEST @ BEGIN OVER OVER CELL + @ ISNEGATIVE 1 - AND = IF SWAP DROP TRUE EXIT THEN @ DUP 0 = IF SWAP DROP FALSE EXIT THEN AGAIN ; 
+ : FLIP SWAP SWIP SWAP ;
+ : FOR HERE ['] >R , ; 
+ : HASH HERE :NAME SWAP HEAP ! CELL + @ ; 
+ : HEAD STATE CELL + ; 
+ : HEAP LATEST CELL + ; 
+ : HERE HEAP @ ; 
+ : HEX_BYTE ffh AND DUP 2/ 2/ 2/ 2/ HEX_NIBB HEX_NIBB ;
+ : HEX_NIBB 0fh AND 48 OR DUP 57 > IF 7 + THEN EMIT ;
+ : HEX_WORD DUP 2/ 2/ 2/ 2/ 2/ 2/ 2/ 2/ 2/ 2/ 2/ 2/ 2/ 2/ 2/ 2/ 2/ 2/ 2/ 2/ 2/ 2/ 2/ 2/ HEX_BYTE DUP 2/ 2/ 2/ 2/ 2/ 2/ 2/ 2/ 2/ 2/ 2/ 2/ 2/ 2/ 2/ 2/ HEX_BYTE DUP 2/ 2/ 2/ 2/ 2/ 2/ 2/ 2/ HEX_BYTE HEX_BYTE ;
+ : HOOK BEGIN >R ;
+ : I ['] R@ , ; 
+ : IF ['] ?BRANCH , HERE 0 , ; 
+ : IMMEDIATE LATEST @ CELL + DUP @ ISNEGATIVE + SWAP ! ; 
+ : IN> >IN @ C@ >IN @ 1 + >IN ! ;
+ : IS STATE @ IF ['] ['] , ['] DEFER! , ELSE ' DEFER! THEN ; 
+ : ISNEGATIVE 80H 2** 2** 2** ; 
+ : ISNEGATIVE LIT [ ISNEGATIVE , ] ; 
+ : LATEST RP CELL + ; 
+ : LEAVE ['] R> , ['] DROP , ['] R> , ['] DROP , ['] EXIT , ; 
+ : LINES SWAP %S PIPE BEGIN DUP . @ . DROP CELL + OVER OVER < IF PIPE DROP DROP EXIT THEN AGAIN ;
+ : LINK, HERE OVER @ @ , SWAP ! ;
+ : LINK>BODY CELL + CELL + ; 
+ : LINK>HASH CELL + ; 
+ : LIT RP@ @ DUP CELL + RP@ ! @ ; 
+ : LITERAL ['] DOLIT , , ;
+ : LOOP ['] R> , ['] LIT , 1 , ['] + , ['] R> , ['] 2DUP , ['] = , ['] ?BRANCH , HERE - , ['] 2DROP , ; 
+ : M* 2DUP XOR 0< >R ABS SWAP ABS UM* R> IF DNEGATE THEN ; 
+ : M/MOD DUP 0< DUP >R IF NEGATE >R DNEGATE R> THEN >R DUP 0< IF R@ + THEN R> UM/MOD R> IF SWAP NEGATE SWAP THEN ;
+ : MAX 2DUP < IF SWAP THEN DROP ;
+ : MAX SWAP MIN ;
+ : MIN 2DUP SWAP < IF SWAP THEN DROP ;
+ : MIN OVER OVER - 0 < IF SWAP THEN DROP ;
+ : MOD ( x y -- r ) /MOD DROP ;
+ : MOD /MOD DROP ; 
+ : MU/MOD >R 0 R@ UM/MOD R> SWAP >R UM/MOD R> ; 
+ : NEXT ['] R> , ['] LIT , 1 , ['] - , ['] DUP , ['] 0< , ['] NOT , ['] ?BRANCH , HERE - , ['] DROP , ; 
+ : NIP SWAP DROP ; 
+ : NL 8 4 + 1 + EMIT ; 
+ : NOR OR NOT ; 
+ : NOT DUP NAND ; 
+ : OF 1 + >R ['] OVER , ['] = , ['] ?BRANCH , HERE 0 , ['] DROP R> ; 
+ : OR NOT SWAP NOT AND NOT ; 
+ : OVER SP@ CELL + @ ; 
+ : PARSE IN> DROP >IN @ SWAP 0 BEGIN OVER IN> <> WHILE 1 + REPEAT SWAP BL = IF >IN @ 1 - >IN ! THEN ;
+ : PIPE LIT [ 32 32 + 32 + 32 + 4 - , ] EMIT ;
+ : POSTPONE ' , ; 
+ : QU LIT [ 16 16 + 2 + , ] ; 
+ : R> RP@ @ RP@ CELL + RP ! RP@ @ SWAP RP@ ! ; 
+ : R@ R> R> DUP >R SWAP >R ; 
+ : REPEAT SWAP ['] BRANCH , HERE - , DUP HERE SWAP - SWAP ! ; 
+ : ROT >R SWAP R> SWAP ; 
+ : ROT SWIP SWAP ;
+ : RP SP CELL + ; 
+ : RP! RP ! ; 
+ : RP0 LIT [ RP@ , ] ; 
+ : RP@ RP @ CELL + ; 
+ : S" [CHAR] " PARSE COMPILES ; 
+ : SCAN BEGIN KEY OVER - 0# NOT UNTIL DROP ; 
+ : SEEN HERE DUP 0 , 32 2 + BEGIN KEY OVER OVER - WHILE , REPEAT HERE OVER - ! ;
+ : SEES HASH FIND IF DUP BEGIN OVER OVER @ = IF DROP DROP EXIT THEN DUP . @ . DROP CR CELL + AGAIN THEN ;
+ : SKIP BEGIN KEY OVER - 0# UNTIL DROP ; 
+ : SNAP ( ) HERE DUP 32 2 + COPY OVER OVER - SWAP C! SWAP DROP SWAP ! ;
+ : SP U@ ; 
+ : SP! SP ! ; 
+ : SP0 LIT [ SP@ , ] ; 
+ : SP@ SP @ CELL + ; 
+ : SPACE BL EMIT ; 
+ : SPACES 0 DO SPACE LOOP ; 
+ : STATE HEAP CELL + ; 
+ : SWAP OVER OVER SP@ CELL + CELL + CELL + ! SP@ CELL + ! ; 
+ : SWIP >R SWAP R> ; 
+ : TESTING SOURCE VERBOSE @ IF DUP >R TYPR CR R> >IN ! ELSE >IN ! DROP [CHAR] * EMIT THEN ;
+ : THEN DUP HERE SWAP - SWAP ! ; 
+ : THROW ?DUP IF HANDLER @ RP! R> HANDLER ! R> SWAP >R SP! DROP R> THEN ;
+ : TICKS BEATS CELL + ; 
+ : TO ' CELL + @ STATE @ IF ' LIT , , ' ! , ELSE ! THEN ; 
+ : TOEND DUP DUP >R >R + SWAP R> + SWAP R> ; 
+ : TRUE -1 ; 
+ : TUCK SWAP OVER ; 
+ : TYPE 0 DO DUP C@ EMIT 1 + LOOP DROP ; 
+ : U< 2DUP XOR 0< IF SWAP DROP 0< EXIT THEN - 0< ;
+ : U> SWAP U< ;
+ : UM* 0 SWAP 32 FOR DUP UM+ >R >R DUP UM+ R> + R> IF >R OVER UM+ R> + THEN NEXT ROT DROP ; 
+ : UM+ + ;
+ : UM/MOD 2DUP U< IF NEGATE 32 FOR >R DUP UM+ >R >R DUP UM+ R> + DUP R> R@ SWAP >R UM+ R> OR IF >R DROP 1 + R> ELSE DROP THEN R> NEXT DROP SWAP EXIT THEN DROP 2DROP 1 - DUP ; 
+ : UMAX 2DUP U< IF SWAP THEN DROP ;
+ : UMIN 2DUP SWAP U< IF SWAP THEN DROP ;
+ : UNTIL ['] ?BRANCH , HERE - , ; 
+ : VALUE CREATE , DOES> @ ; 
+ : VARIABLE CREATE CELL ALLOT ; 
+ : VOID ; 
+ : WHILE ['] ?BRANCH , HERE 0 , ; 
+ : WITHIN OVER - >R - R> U< ;
+ : WORD IN> DROP BEGIN DUP IN> <> UNTIL >IN @ 2 - >IN ! PARSE ;
+ : XNOR XOR NOT ; 
+ : XOR 2DUP AND INVERT -ROT OR and ;
+ : XOR OVER OVER AND -ROT NOR NOR ; 
+ : [ 0 STATE ! ; 
+ : ['] RP@ @ DUP CELL + RP@ ! @ ; 
+ : [CHAR] ['] LIT , BL WORD DROP C@ , ; 
+ : \ 8 2 + SCAN ; 
+ : ] 1 STATE ! ; 
+ : ffh LIT [ 0fh 2* 2* 2* 2* 0fh OR , ] ; 
+ : }T DEPTH ACTUAL-DEPTH @ = IF DEPTH ?DUP IF 0 DO ACTUAL-RESULTS I CELLS + @ = 0= IF S" INCORRECT RESULT: " ERROR LEAVE THEN LOOP THEN ELSE S" WRONG NUMBER OF RESULTS: " ERROR THEN ; 
+ :T{ ;
+ CREATE ACTUAL-RESULTS 20 CELLS ALLOT
+ CREATE TIB 80 CHARS ALLOT
+ VARIABLE >IN
+ VARIABLE ACTUAL-DEPTH
+ VARIABLE HANDLER
+ VARIABLE VERBOSE FALSE VERBOSE !

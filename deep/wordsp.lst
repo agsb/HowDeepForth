@@ -1,0 +1,393 @@
+^ BACK [  R> RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ - HEAP @ ! CELL HEAP @ + HEAP ! ]
+~ BACK 2 5 11 30 7
+^ HERE [  HEAP @ ]
+~ HERE 2 1 0 2 3
+^ REPEAT [  SWAP RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ - HEAP @ ! CELL HEAP @ + HEAP ! DUP HEAP @ SWAP - SWAP ! ]
+~ REPEAT 13 4 11 37 10
+^ CCOPY< [  HEAP @ RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! OVER @ OVER ! U@ 0# U@ 0# + U@ 0# NAND - SWAP U@ 0# U@ 0# + U@ 0# NAND - SWAP RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! U@ 0# U@ 0# + U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ - HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! DROP DROP DROP ]
+~ CCOPY< 13 5 70 211 43
+^ BUFFER [  HEAP @ : U@ 0# U@ 0# NAND STATE ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ CELL + CELL + CELL + HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ CELL + @ ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! LATEST ! HEAP @ + HEAP ! ]
+~ BUFFER 2 5 30 91 19
+^ ACCEPT [  RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! KEY DUP U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + + + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + + EMIT - 0# RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! OVER ! U@ 0# U@ 0# + U@ 0# NAND + RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! SWAP DUP HEAP @ SWAP - SWAP ! R> DROP U@ 0# U@ 0# NAND R> DUP HEAP @ SWAP - SWAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! U@ 0# U@ 0# + U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ - HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! DUP HEAP @ SWAP - SWAP ! DROP ]
+~ ACCEPT 20 7 165 419 60
+^ DJB2 [  LIT 1024 DUP DUP + DUP + + 256 + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + + + U@ 0# U@ 0# + U@ 0# NAND + HEAP @ ! CELL HEAP @ + HEAP ! U@ 0# U@ 0# + U@ 0# NAND STATE ! ]
+~ DJB2 17 5 32 74 15
+^ BEGIN-STRUCTURE [  HEAP @ : U@ 0# U@ 0# NAND STATE ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ CELL + CELL + CELL + HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ CELL + @ ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! LATEST ! HEAP @ U@ 0# U@ 0# NAND U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! R> CELL + @ @ ! @ ]
+~ BEGIN-STRUCTURE 7 5 41 114 23
+^ IF [  RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! ]
+~ IF 6 4 13 33 9
+^ DOES> [  R> CELL + @ @ ! ]
+~ DOES> 4 2 1 6 4
+^ DEFER@ [  CELL + @ @ ]
+~ DEFER@ 2 2 1 4 3
+^ MIN [  OVER OVER - U@ 0# U@ 0# NAND < RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! SWAP DUP HEAP @ SWAP - SWAP ! DROP ]
+~ MIN 9 5 19 51 11
+^ LEAVE [  RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! ]
+~ LEAVE 15 4 25 85 22
+^ -1 [  U@ 0# ]
+~ -1 2 1 0 2 3
+^ COMPILE [  R> DUP @ HEAP @ ! CELL HEAP @ + HEAP ! CELL + >R ]
+~ COMPILE 7 4 4 15 4
+^ <> [  - 0# ]
+~ <> 2 1 0 2 3
+^ 2DROP [  DROP DROP ]
+~ 2DROP 2 1 0 2 3
+^ ABORT [  U@ 0# DUP RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! DUP DUP HEAP @ SWAP - SWAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! HANDLER @ RP! R> HANDLER ! R> SWAP >R SP! DROP R> DUP HEAP @ SWAP - SWAP ! ]
+~ ABORT 2 7 35 96 14
+^ LITERAL [  RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ ! CELL HEAP @ + HEAP ! ]
+~ LITERAL 4 4 9 26 7
+^ +FIELD [  HEAP @ : U@ 0# U@ 0# NAND STATE ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ CELL + CELL + CELL + HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ CELL + @ ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! LATEST ! OVER HEAP @ ! CELL HEAP @ + HEAP ! + R> CELL + @ @ ! @ + ]
+~ +FIELD 7 5 34 105 22
+^ TUCK [  SWAP OVER ]
+~ TUCK 2 1 0 2 3
+^ CELLS [  DUP + DUP + ]
+~ CELLS 4 1 0 4 5
+^ 2DUP [  OVER OVER ]
+~ 2DUP 2 1 0 2 3
+^ FLIP [  SWAP >R SWAP R> SWAP ]
+~ FLIP 3 2 1 5 3
+^ CCOPY [  HEAP @ RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! OVER @ OVER ! U@ 0# U@ 0# + U@ 0# NAND + SWAP U@ 0# U@ 0# + U@ 0# NAND + SWAP RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! U@ 0# U@ 0# + U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ - HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! DROP DROP DROP ]
+~ CCOPY 13 5 70 211 43
+^ <BUILDS [  HEAP @ : U@ 0# U@ 0# NAND STATE ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ CELL + CELL + CELL + HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ CELL + @ ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! LATEST ! U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! ]
+~ <BUILDS 3 5 35 100 21
+^ 16 [  U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + + + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + + + + ]
+~ 16 3 6 78 143 24
+^ CREATE [  HEAP @ : U@ 0# U@ 0# NAND STATE ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ CELL + CELL + CELL + HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ CELL + @ ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! LATEST ! ]
+~ CREATE 23 4 27 86 22
+^ SCAN [  HEAP @ KEY OVER - 0# NOT RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ - HEAP @ ! CELL HEAP @ + HEAP ! DROP ]
+~ SCAN 8 5 13 37 8
+^ SKIP [  HEAP @ KEY OVER - 0# RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ - HEAP @ ! CELL HEAP @ + HEAP ! DROP ]
+~ SKIP 7 5 13 36 8
+^ ' [  BL HEAP @ KEY OVER OVER = NOT RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ - HEAP @ ! CELL HEAP @ + HEAP ! LIT 1024 DUP DUP + DUP + + 256 + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + + + U@ 0# U@ 0# + U@ 0# NAND + HEAP @ ! CELL HEAP @ + HEAP ! U@ 0# U@ 0# + U@ 0# NAND STATE ! HEAP @ DUP DUP + DUP + DUP + DUP + DUP + + XOR >R KEY OVER OVER = RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! TRUE RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! SWAP DUP HEAP @ SWAP - SWAP ! R> FALSE DUP HEAP @ SWAP - SWAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ - HEAP @ ! CELL HEAP @ + HEAP ! DROP DROP R> LATEST @ HEAP @ OVER OVER CELL + @ ISNEGATIVE U@ 0# U@ 0# + U@ 0# NAND - AND = RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! SWAP DROP TRUE EXIT DUP HEAP @ SWAP - SWAP ! @ DUP U@ 0# U@ 0# NAND = RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! SWAP DROP FALSE EXIT DUP HEAP @ SWAP - SWAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ - HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! CELL + CELL + DUP HEAP @ SWAP - SWAP ! ]
+~ ' 8 7 160 437 63
+^ LOOP [  RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! U@ 0# U@ 0# + U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ - HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! ]
+~ LOOP 29 4 53 165 42
+^ ( [  32 U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + + + + U@ 0# U@ 0# + U@ 0# NAND + HEAP @ KEY OVER - 0# NOT RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ - HEAP @ ! CELL HEAP @ + HEAP ! DROP ]
+~ ( 6 6 57 119 20
+^ U> [  SWAP U< ]
+~ U> 2 1 0 2 3
+^ BEGIN [  HEAP @ ]
+~ BEGIN 1 2 1 2 2
+^ NIP [  SWAP DROP ]
+~ NIP 2 1 0 2 3
+^ DEFER [  HEAP @ : U@ 0# U@ 0# NAND STATE ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ CELL + CELL + CELL + HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ CELL + @ ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! LATEST ! HEAP @ CELL + @ ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! R> CELL + @ @ ! @ >R ]
+~ DEFER 10 5 38 117 24
+^ , [  HEAP @ ! CELL HEAP @ + HEAP ! ]
+~ , 4 3 3 9 4
+^ LINK>HASH [  CELL + ]
+~ LINK>HASH 2 1 0 2 3
+^ UMAX [  OVER OVER U< RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! SWAP DUP HEAP @ SWAP - SWAP ! DROP ]
+~ UMAX 6 5 17 45 10
+^ ['] [  RP@ @ DUP CELL + RP@ ! @ ]
+~ ['] 8 1 0 8 9
+^ FINDT [  LATEST @ HEAP @ OVER OVER CELL + @ ISNEGATIVE U@ 0# U@ 0# + U@ 0# NAND - AND = RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! SWAP DROP TRUE EXIT DUP HEAP @ SWAP - SWAP ! @ DUP U@ 0# U@ 0# NAND = RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! SWAP DROP FALSE EXIT DUP HEAP @ SWAP - SWAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ - HEAP @ ! CELL HEAP @ + HEAP ! ]
+~ FINDT 30 5 52 146 30
+^ 0 [  U@ 0# U@ 0# NAND ]
+~ 0 3 2 2 5 3
+^ 2>R [  SWAP >R >R ]
+~ 2>R 3 1 0 3 4
+^ 1 [  U@ 0# U@ 0# + U@ 0# NAND ]
+~ 1 5 2 3 8 5
+^ CFILL [  HEAP @ RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! OVER OVER ! U@ 0# U@ 0# + U@ 0# NAND + RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! U@ 0# U@ 0# + U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ - HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! DROP DROP DROP ]
+~ CFILL 8 5 66 199 40
+^ IMMEDIATE [  LATEST @ CELL + DUP @ ISNEGATIVE + SWAP ! ]
+~ IMMEDIATE 10 1 0 10 11
+^ 2 [  U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + ]
+~ 2 3 3 8 17 6
+^ THEN [  DUP HEAP @ SWAP - SWAP ! ]
+~ THEN 6 2 1 7 4
+^ 3 [  U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + U@ 0# U@ 0# + U@ 0# NAND + ]
+~ 3 3 4 13 26 7
+^ 4 [  U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + + ]
+~ 4 3 4 18 35 9
+^ LINK>BODY [  CELL + CELL + ]
+~ LINK>BODY 4 1 0 4 5
+^ DROPS [  DROP DROP DROP ]
+~ DROPS 3 1 0 3 4
+^ 8 [  U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + + + ]
+~ 8 3 5 38 71 15
+^ >BODY [  CELL + @ ]
+~ >BODY 3 1 0 3 4
+^ > [  SWAP < ]
+~ > 2 1 0 2 3
+^ DOVAR [  R> DUP CELL + >R ]
+~ DOVAR 5 1 0 5 6
+^ CFILL< [  HEAP @ RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! OVER OVER ! U@ 0# U@ 0# + U@ 0# NAND - RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! U@ 0# U@ 0# + U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ - HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! DROP DROP DROP ]
+~ CFILL< 8 5 66 199 40
+^ DO [  RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! ]
+~ DO 10 4 16 53 14
+^ UNTIL [  RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ - HEAP @ ! CELL HEAP @ + HEAP ! ]
+~ UNTIL 6 4 10 29 8
+^ XNOR [  XOR NOT ]
+~ XNOR 2 1 0 2 3
+^ TOEND [  DUP DUP >R >R + SWAP R> + SWAP R> ]
+~ TOEND 10 1 0 10 11
+^ UMIN [  OVER OVER SWAP U< RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! SWAP DUP HEAP @ SWAP - SWAP ! DROP ]
+~ UMIN 7 5 17 46 10
+^ ELSE [  RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! SWAP DUP HEAP @ SWAP - SWAP ! ]
+~ ELSE 13 4 14 41 11
+^ DOLIT [  R> DUP CELL + >R ]
+~ DOLIT 5 1 0 5 6
+^ NOR [  OR NOT ]
+~ NOR 2 1 0 2 3
+^ :NONAME [  HEAP @ U@ 0# U@ 0# + U@ 0# NAND STATE ! ]
+~ :NONAME 4 3 5 12 5
+^ WHILE [  RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! ]
+~ WHILE 6 4 13 33 9
+^ ." [  32 U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + + HEAP @ KEY OVER OVER - RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! EMIT SWAP RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ - HEAP @ ! CELL HEAP @ + HEAP ! DUP HEAP @ SWAP - SWAP ! DROP DROP ]
+~ ." 13 5 37 98 20
+^ NEXT [  RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! U@ 0# U@ 0# + U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ - HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! ]
+~ NEXT 29 4 53 165 42
+^ SPACE [  BL EMIT ]
+~ SPACE 2 1 0 2 3
+^ I [  RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! ]
+~ I 3 4 5 17 5
+^ CONSTANT [  HEAP @ : U@ 0# U@ 0# NAND STATE ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ CELL + CELL + CELL + HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ CELL + @ ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! LATEST ! HEAP @ ! CELL HEAP @ + HEAP ! R> CELL + @ @ ! @ ]
+~ CONSTANT 4 5 34 102 21
+^ ?DUP [  DUP RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! DUP DUP HEAP @ SWAP - SWAP ! ]
+~ ?DUP 4 5 16 42 9
+^ 2! [  SWAP OVER ! CELL + ! ]
+~ 2! 6 1 0 6 7
+^ AGAIN [  RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ - HEAP @ ! CELL HEAP @ + HEAP ! ]
+~ AGAIN 6 4 10 29 8
+^ ALLOT [  HEAP @ + HEAP ! ]
+~ ALLOT 4 2 1 5 3
+^ DOCON [  R> DUP CELL + >R @ ]
+~ DOCON 6 1 0 6 7
+^ HOOK [  HEAP @ >R ]
+~ HOOK 2 3 2 3 2
+^ CATCH [  SP@ >R HANDLER @ >R RP@ HANDLER ! >R R> HANDLER ! R> DROP U@ 0# U@ 0# NAND ]
+~ CATCH 15 3 4 19 7
+^ HASH [  HEAP @ HEAP @ : U@ 0# U@ 0# NAND STATE ! SWAP HEAP ! CELL + @ ]
+~ HASH 8 4 6 18 5
+^ C, [  HEAP @ C! U@ 0# U@ 0# + U@ 0# NAND HEAP @ + HEAP ! ]
+~ C, 4 3 7 16 6
+^ VARIABLE [  HEAP @ : U@ 0# U@ 0# NAND STATE ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ CELL + CELL + CELL + HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ CELL + @ ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! LATEST ! CELL HEAP @ + HEAP ! ]
+~ VARIABLE 3 5 30 92 19
+^ [ [  U@ 0# U@ 0# NAND STATE ! ]
+~ [ 3 3 3 7 3
+^ HASHT [  BL HEAP @ KEY OVER OVER = NOT RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ - HEAP @ ! CELL HEAP @ + HEAP ! LIT 1024 DUP DUP + DUP + + 256 + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + + + U@ 0# U@ 0# + U@ 0# NAND + HEAP @ ! CELL HEAP @ + HEAP ! U@ 0# U@ 0# + U@ 0# NAND STATE ! HEAP @ DUP DUP + DUP + DUP + DUP + DUP + + XOR >R KEY OVER OVER = RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! TRUE RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! SWAP DUP HEAP @ SWAP - SWAP ! R> FALSE DUP HEAP @ SWAP - SWAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ - HEAP @ ! CELL HEAP @ + HEAP ! DROP DROP R> ]
+~ HASHT 38 6 90 247 42
+^ \ [  U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + + + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + + HEAP @ KEY OVER - 0# NOT RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ - HEAP @ ! CELL HEAP @ + HEAP ! DROP ]
+~ \ 4 6 62 126 22
+^ ] [  U@ 0# U@ 0# + U@ 0# NAND STATE ! ]
+~ ] 3 3 4 10 4
+^ SPACES [  U@ 0# U@ 0# NAND RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! BL EMIT RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! U@ 0# U@ 0# + U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ - HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! ]
+~ SPACES 4 5 75 225 46
+^ EXECUTE [  >R ]
+~ EXECUTE 1 1 0 1 2
+^ VALUE [  HEAP @ : U@ 0# U@ 0# NAND STATE ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ CELL + CELL + CELL + HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ CELL + @ ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! LATEST ! HEAP @ ! CELL HEAP @ + HEAP ! R> CELL + @ @ ! @ ]
+~ VALUE 4 5 34 102 21
+^ NL [  U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + + + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + + + U@ 0# U@ 0# + U@ 0# NAND + EMIT ]
+~ NL 6 6 62 117 20
+^ FOR [  HEAP @ RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! ]
+~ FOR 4 4 6 19 5
+^ 2R> [  R> R> SWAP ]
+~ 2R> 3 1 0 3 4
+^ 2R@ [  R> R> OVER OVER >R >R SWAP ]
+~ 2R@ 6 2 1 7 4
+^ WITHIN [  OVER - >R - R> U< ]
+~ WITHIN 6 1 0 6 7
+^ 0< [  ISNEGATIVE AND 0# ]
+~ 0< 3 1 0 3 4
+^ ABS [  DUP ISNEGATIVE AND 0# RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! NEGATE DUP HEAP @ SWAP - SWAP ! ]
+~ ABS 5 5 17 45 10
+^ -ROT [  SWAP >R SWAP R> ]
+~ -ROT 2 2 1 4 3
+^ 0= [  0# NOT ]
+~ 0= 2 1 0 2 3
+^ 0> [  DUP 0# NOT RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! DROP FALSE EXIT DUP HEAP @ SWAP - SWAP ! ISNEGATIVE AND 0# RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! FALSE EXIT DUP HEAP @ SWAP - SWAP ! TRUE ]
+~ 0> 13 5 34 92 19
+^ END-STRUCTURE [  SWAP ! ]
+~ END-STRUCTURE 2 1 0 2 3
+^ DEFER! [  CELL + @ ! ]
+~ DEFER! 2 2 1 4 3
+^ ARRAY [  HEAP @ : U@ 0# U@ 0# NAND STATE ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ CELL + CELL + CELL + HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ CELL + @ ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! LATEST ! HEAP @ + HEAP ! R> CELL + @ @ ! + @ ]
+~ ARRAY 5 5 32 99 20
+^ TYPE [  U@ 0# U@ 0# NAND RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! DUP C@ EMIT U@ 0# U@ 0# + U@ 0# NAND + RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! U@ 0# U@ 0# + U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ - HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! DROP ]
+~ TYPE 9 5 78 236 48
+^ 2@ [  DUP CELL + @ SWAP @ ]
+~ 2@ 6 1 0 6 7
+^ THROW [  DUP RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! DUP DUP HEAP @ SWAP - SWAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! HANDLER @ RP! R> HANDLER ! R> SWAP >R SP! DROP R> DUP HEAP @ SWAP - SWAP ! ]
+~ THROW 15 6 33 94 16
+^ ?BACK [  R> RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ - HEAP @ ! CELL HEAP @ + HEAP ! ]
+~ ?BACK 2 5 11 30 7
+^ TO [  BL HEAP @ KEY OVER OVER = NOT RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ - HEAP @ ! CELL HEAP @ + HEAP ! LIT 1024 DUP DUP + DUP + + 256 + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + + + U@ 0# U@ 0# + U@ 0# NAND + HEAP @ ! CELL HEAP @ + HEAP ! U@ 0# U@ 0# + U@ 0# NAND STATE ! HEAP @ DUP DUP + DUP + DUP + DUP + DUP + + XOR >R KEY OVER OVER = RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! TRUE RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! SWAP DUP HEAP @ SWAP - SWAP ! R> FALSE DUP HEAP @ SWAP - SWAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ - HEAP @ ! CELL HEAP @ + HEAP ! DROP DROP R> LATEST @ HEAP @ OVER OVER CELL + @ ISNEGATIVE U@ 0# U@ 0# + U@ 0# NAND - AND = RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! SWAP DROP TRUE EXIT DUP HEAP @ SWAP - SWAP ! @ DUP U@ 0# U@ 0# NAND = RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! SWAP DROP FALSE EXIT DUP HEAP @ SWAP - SWAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ - HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! CELL + CELL + DUP HEAP @ SWAP - SWAP ! CELL + @ STATE @ RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! SWAP DUP HEAP @ SWAP - SWAP ! ! DUP HEAP @ SWAP - SWAP ! ]
+~ TO 17 8 206 567 71
+^ SWIP [  >R SWAP R> ]
+~ SWIP 3 1 0 3 4
+^ +! [  SWAP OVER @ + SWAP ! ]
+~ +! 6 1 0 6 7
+^ 2SWAP [  ROT >R ROT R> ]
+~ 2SWAP 4 1 0 4 5
+^ MAX [  SWAP OVER OVER - U@ 0# U@ 0# NAND < RP@ @ DUP CELL + RP@ ! @ HEAP @ ! CELL HEAP @ + HEAP ! HEAP @ U@ 0# U@ 0# NAND HEAP @ ! CELL HEAP @ + HEAP ! SWAP DUP HEAP @ SWAP - SWAP ! DROP ]
+~ MAX 2 6 20 52 9
+^ COUNT [  SWAP OVER HEAP @ OVER OVER @ = ]
+~ COUNT 7 3 2 8 3
+^ :NAME [  HEAP @ : U@ 0# U@ 0# NAND STATE ! ]
+~ :NAME 5 3 4 10 4
+^ CR [  U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + + + U@ 0# U@ 0# + U@ 0# NAND U@ 0# U@ 0# + U@ 0# NAND + + EMIT ]
+~ CR 4 6 48 90 16
+= EXIT 29
+= STATE 20
+= BACK 1
+= SP@ 1
+= HERE 1437
+= AND 6
+= REPEAT 3
+= CCOPY< 1
+= BUFFER 1
+= NEGATE 1
+= ACCEPT 1
+= DJB2 7
+= BEGIN-STRUCTURE 1
+= IF 53
+= DOES> 13
+= DEFER@ 1
+= MIN 3
+= LEAVE 1
+= HEAP 1001
+= -1 1057
+= COMPILE 1
+= <> 3
+= 2DROP 4
+= OVER 53
+= HANDLER 7
+= ABORT 2
+= LITERAL 1
+= +FIELD 1
+= TUCK 1
+= CELLS 1
+= 2DUP 10
+= FLIP 1
+= CCOPY 1
+= <BUILDS 1
+= ! 839
+= NAND 196
+= 16 1
+= CREATE 19
+= SCAN 5
+= SKIP 1
+= 32 2
+= ' 3
+= LOOP 5
+= U< 4
+= ( 1
+= OR 1
+= U> 1
+= BEGIN 33
+= + 817
+= NIP 1
+= 1024 4
+= U@ 529
+= DEFER 1
+= , 551
+= >R 38
+= - 86
+= LINK>HASH 1
+= UMAX 1
+= ['] 363
+= FINDT 5
+= 0 121
+= 2>R 1
+= 1 269
+= CFILL 1
+= IMMEDIATE 1
+= 2 99
+= THEN 53
+= 3 1
+= 256 4
+= 4 43
+= ROT 2
+= BL 5
+= LINK>BODY 1
+= DROPS 9
+= 8 15
+= : 12
+= DUP 276
+= < 3
+= >BODY 41
+= = 16
+= > 1
+= DOVAR 1
+= CFILL< 1
+= DO 5
+= UNTIL 23
+= XNOR 1
+= @ 1143
+= TOEND 1
+= UMIN 1
+= ELSE 11
+= DOLIT 1
+= NOR 1
+= :NONAME 1
+= WHILE 3
+= NOT 16
+= CELL 529
+= ." 1
+= RP! 2
+= NEXT 11
+= SPACE 3
+= EMIT 7
+= I 1
+= 0# 540
+= C! 1
+= CONSTANT 1
+= ?DUP 5
+= ISNEGATIVE 7
+= KEY 12
+= 2! 1
+= AGAIN 9
+= ALLOT 561
+= DOCON 1
+= FALSE 8
+= HOOK 1
+= CATCH 1
+= HASH 1
+= C, 1
+= VARIABLE 1
+= SWAP 122
+= [ 5
+= XOR 4
+= HASHT 5
+= \ 1
+= ] 9
+= SPACES 1
+= EXECUTE 5
+= R> 54
+= VALUE 1
+= NL 1
+= FOR 11
+= R@ 1
+= SP! 2
+= 2R> 1
+= RP@ 365
+= 2R@ 1
+= WITHIN 1
+= 0< 11
+= ABS 1
+= -ROT 1
+= 0= 3
+= 0> 1
+= LATEST 14
+= END-STRUCTURE 1
+= C@ 1
+= DEFER! 1
+= ARRAY 1
+= TYPE 1
+= 2@ 1
+= THROW 3
+= ?BACK 1
+= DROP 55
+= LIT 25
+= TO 1
+= SWIP 5
+= BRANCH 13
+= +! 1
+= 2SWAP 1
+= MAX 1
+= TRUE 7
+= ?BRANCH 50
+= COUNT 1
+= :NAME 23
+= CR 3
